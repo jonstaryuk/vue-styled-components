@@ -20,7 +20,8 @@ export default (ComponentStyle) => {
             },
             on: {
               input: (event) => {
-                this.$emit('input', event.target.value)
+                if (this)
+                  this.$emit('input', event.target.value)
               }
             }
           },
